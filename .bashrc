@@ -3,8 +3,12 @@ export CLICOLOR=1
 HISTCONTROL=ignoredups
 
 alias grep='grep --color=auto -i'
+
 alias g='git'
-alias gs='git status'
+alias ga='g a'
+alias gc='g c'
+alias gs='g s'
+
 alias ll='ls -l'
 alias watch.vows="watchr $HOME/local/bin/vows.watchr"
 alias repack='ffmpeg -vcodec copy -acodec copy -i'
