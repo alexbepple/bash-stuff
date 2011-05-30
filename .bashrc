@@ -41,9 +41,8 @@ export NODE_PATH="/usr/local/lib/node"
 # NPM
 add_to_path "/usr/local/share/npm/bin"
 
-# Gems
-export GEM_HOME=$HOME/.gem/ruby/1.8
-add_to_path "$GEM_HOME/bin"
+# Ruby
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 source_if_exists `brew --prefix`/etc/autojump
 
