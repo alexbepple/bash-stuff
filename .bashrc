@@ -11,6 +11,7 @@ alias gs='g s'
 
 alias ll='ls -l'
 alias watch.vows="watchr $HOME/local/bin/vows.watchr"
+alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr"
 alias repack='ffmpeg -vcodec copy -acodec copy -i'
 alias mount.pensieve='encfs ~/.pensieve_encrypted/ ~/.pensieve'
 
