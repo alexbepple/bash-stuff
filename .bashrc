@@ -10,8 +10,6 @@ alias gc='g c'
 alias gs='g s'
 
 alias ll='ls -l'
-alias watch.vows="watchr $HOME/local/bin/vows.watchr"
-alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr"
 alias repack='ffmpeg -vcodec copy -acodec copy -i'
 alias mount.pensieve='encfs ~/.pensieve_encrypted/ ~/.pensieve'
 
@@ -41,6 +39,8 @@ export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
 export NODE_PATH="/usr/local/lib/node"
 # NPM
 add_to_path "/usr/local/share/npm/bin"
+alias watch.vows="watchr $HOME/local/bin/vows.watchr"
+alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr"
 
 # Ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
