@@ -5,9 +5,9 @@ HISTCONTROL=ignoredups
 alias grep='grep --color=auto -i'
 
 alias g='git'
-alias ga='g a'
-alias gc='g c'
-alias gs='g s'
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
 
 alias ll='ls -l'
 alias repack='ffmpeg -vcodec copy -acodec copy -i'
