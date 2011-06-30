@@ -1,4 +1,5 @@
-PS1="[ \[\033[01;34m\]\W\[\033[00m\] ]\n$ "
+TITLEBAR='\033]2;\W\007'
+PS1="${TITLEBAR}[ \[\033[01;34m\]\w\[\033[00m\] ]\n$ "
 export CLICOLOR=1
 HISTCONTROL=ignoredups
 
