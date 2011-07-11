@@ -36,7 +36,7 @@ add_to_path "/usr/local/bin"
 add_to_path "/usr/local/sbin"
 
 # Python
-add_to_path "/usr/local/Cellar/python/2.7.1/bin"
+add_to_path "/usr/local/share/python"
 export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
 
 # Node.js
