@@ -19,12 +19,6 @@ add_to_path() {
     export PATH=$1:$PATH    
 }
 
-source_if_exists() {
-    if [ -f "$1" ]; then
-        source "$1"
-    fi
-}
-
 add_to_path "$HOME/local/bin"
 
 add_to_path "$HOME/Applications/android-sdk-mac_x86_r12/platform-tools"
@@ -49,7 +43,7 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 # Ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-source_if_exists `brew --prefix`/etc/autojump
+source `brew --prefix`/etc/autojump
 
 # Bash completion
 export BASH_COMPLETION_DIR="$HOME/local/bash_completion.d"
