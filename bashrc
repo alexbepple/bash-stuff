@@ -52,6 +52,7 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 source_if_exists `brew --prefix`/etc/autojump
 
 # Bash completion
-source_if_exists `brew --prefix`/etc/bash_completion
-source ~/local/Cellar/rails_completion/rails.bash
-source ~/local/Cellar/completion-ruby/completion-rake
+export BASH_COMPLETION_DIR="$HOME/local/bash_completion.d"
+for i in $(LC_ALL=C command ls "$BASH_COMPLETION_DIR"); do
+    source "$BASH_COMPLETION_DIR/$i"
+done
