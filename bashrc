@@ -21,8 +21,6 @@ add_to_path() {
 
 add_to_path "$HOME/local/bin"
 
-add_to_path "$HOME/Applications/android-sdk-mac_x86_r12/platform-tools"
-
 # Homebrew
 alias brew.update='brew update && brew outdated'
 alias brew.upgrade='brew outdated | cut -f 1 | xargs brew install'
