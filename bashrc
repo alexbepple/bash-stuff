@@ -44,10 +44,4 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 
 source `brew --prefix`/etc/autojump
 
-# Bash completion
-export BASH_COMPLETION_DIR="$HOME/local/bash_completion.d"
-for i in $(LC_ALL=C command ls "$BASH_COMPLETION_DIR"); do
-    source "$BASH_COMPLETION_DIR/$i"
-done
-# For sudo this is a stupid solution. But still.
-complete -c which man sudo
+source "$HOME/.bash_completion"
