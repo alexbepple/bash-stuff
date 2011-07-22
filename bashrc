@@ -13,7 +13,6 @@ alias gd='git diff'
 
 alias ll='ls -l'
 alias repack='ffmpeg -vcodec copy -acodec copy -i'
-alias mount.pensieve='encfs ~/.pensieve_encrypted/ ~/.pensieve'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
 
 add_to_path() {
