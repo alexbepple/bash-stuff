@@ -1,5 +1,7 @@
-TITLEBAR='\033]2;\W\007'
-PS1="${TITLEBAR}[ \[\033[01;34m\]\w\[\033[00m\] ]\n$ "
+TITLEBAR="\033]2;\W\007"
+START_COLOR="\[\033[47;1;30m\]"
+STOP_COLOR="\[\033[0m\]"
+PS1="${TITLEBAR}${START_COLOR}[ \w ]${STOP_COLOR}\n$ "
 export CLICOLOR=1
 HISTCONTROL=ignoredups
 
