@@ -24,8 +24,6 @@ add_to_path() {
 add_to_path "$HOME/local/bin"
 
 # Homebrew
-alias brew.update='brew update && brew outdated'
-alias brew.upgrade='brew outdated | cut -f 1 | xargs brew install'
 add_to_path "/usr/local/bin"
 add_to_path "/usr/local/sbin"
 
