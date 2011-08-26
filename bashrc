@@ -13,6 +13,7 @@ alias gc='git commit -v'
 alias gs='git status'
 alias gd='git diff'
 
+alias la='ls -a'
 alias ll='ls -l'
 alias remux='ffmpeg -vcodec copy -acodec copy -i'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
