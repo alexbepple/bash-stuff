@@ -18,6 +18,8 @@ alias ll='ls -l'
 alias remux='ffmpeg -vcodec copy -acodec copy -i'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
 
+alias locate.updatedb='sudo /usr/libexec/locate.updatedb'
+
 add_to_path() {
     export PATH=$1:$PATH    
 }
