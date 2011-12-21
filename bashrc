@@ -44,6 +44,9 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 # Ruby
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+
+# Changing directory
+alias up='cd ..'
 source `brew --prefix`/etc/autojump
 
 source "$HOME/.bash_completion"
