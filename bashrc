@@ -49,4 +49,9 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 alias up='cd ..'
 source `brew --prefix`/etc/autojump
 
+# Page more conveniently and with more color
+vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
+alias less="$vim_less"
+export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
+
 source "$HOME/.bash_completion"
