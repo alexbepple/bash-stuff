@@ -9,4 +9,4 @@ done
 complete -c which man sudo
 
 # Complete ssh from recently used hosts
-complete -W "$(echo $(grep '^ssh ' .bash_history | sort -u | sed 's/^ssh //'))" ssh
+complete -W "$(echo $(grep '^ssh ' ~/.bash_history | sort -u | sed 's/^ssh //'))" ssh
