@@ -42,9 +42,6 @@ add_to_path "/usr/local/share/npm/bin"
 alias watch.vows="watchr $HOME/local/bin/vows.watchr"
 alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr"
 
-# Ruby
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
 
 # Changing directory
 alias up='cd ..'
