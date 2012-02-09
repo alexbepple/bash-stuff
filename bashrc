@@ -44,7 +44,16 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 
 
 # Changing directory
-alias up='cd ..'
+# Calling `cd` once allows to use `cd -` to go back
+function up() {
+    suppliedLevelsCount=$(echo ${1} | awk '/[0-9]+/')
+    levelsCount=${suppliedLevelsCount:-1}
+    target=""
+    for ((level=0; level<levelsCount; level++)); do
+        target="../$target"
+    done
+    cd $target
+}
 source `brew --prefix`/etc/autojump
 
 # Page more conveniently and with more color
