@@ -21,6 +21,12 @@ alias convert.new.lines.to.nul="tr '\n' '\0'"
 
 alias locate.updatedb='sudo /usr/libexec/locate.updatedb'
 
+function script_dir() {
+    script_path=${BASH_SOURCE[0]}
+    while [ -h "$script_path" ] ; do script_path="$(readlink "$script_path")"; done
+    echo "$(cd -P "$(dirname "$script_path")" && pwd)"
+}
+
 add_to_path() {
     export PATH=$1:$PATH    
 }
@@ -44,17 +50,9 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 
 
 # Changing directory
-# Calling `cd` once allows to use `cd -` to go back
-function up() {
-    suppliedLevelsCount=$(echo ${1} | awk '/[0-9]+/')
-    levelsCount=${suppliedLevelsCount:-1}
-    target=""
-    for ((level=0; level<levelsCount; level++)); do
-        target="../$target"
-    done
-    cd $target
-}
+source "$(script_dir)/functions/up"
 source `brew --prefix`/etc/autojump
+
 
 # Page more conveniently and with more color
 vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
