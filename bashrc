@@ -17,6 +17,7 @@ alias la='ls -a'
 alias ll='ls -l'
 alias remux='ffmpeg -vcodec copy -acodec copy -i'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
+alias convert.new.lines.to.nul="tr '\n' '\0'"
 
 alias locate.updatedb='sudo /usr/libexec/locate.updatedb'
 
