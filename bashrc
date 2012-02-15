@@ -51,6 +51,8 @@ add_to_path "/usr/local/share/npm/bin"
 alias watch.vows="watchr $HOME/local/bin/vows.watchr"
 alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr"
 
+# Gradle
+export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 
 # Changing directory
 source "$(script_dir)/functions/up"
