@@ -8,6 +8,7 @@ HISTCONTROL=ignoredups
 alias grep='grep --color=auto -i'
 
 alias g='git'
+alias ga='git add'
 alias gac='git add -A && git commit -v'
 alias gc='git commit -v'
 alias gs='git status'
