@@ -12,6 +12,7 @@ alias gac='git add -A && git commit -v'
 alias gc='git commit -v'
 alias gs='git status'
 alias gd='git diff'
+alias st='open -a sourcetree'
 
 alias la='ls -a'
 alias ll='ls -l'
