@@ -47,7 +47,7 @@ export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
 add_to_path "$HOME/.gem/ruby/1.8/bin"
 
 # Node.js
-export NODE_PATH="/usr/local/lib/node"
+export NODE_PATH="/usr/local/lib/node_modules"
 # NPM
 add_to_path "/usr/local/share/npm/bin"
 alias watch.vows="watchr $HOME/local/bin/vows.watchr"
