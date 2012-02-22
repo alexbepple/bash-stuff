@@ -20,19 +20,19 @@ function script_dir() {
 }
 readonly SCRIPT_DIR="$(script_dir)"
 
-add_to_path() {
+function add_to_path() {
     export PATH=$1:$PATH    
 }
 
 add_to_path "$HOME/local/bin"
 
 # Homebrew
-for file in "$SCRIPT_DIR/brew"/*; do
+for file in "$SCRIPT_DIR/modules/brew"/*; do
     source "$file"
 done
 
 # Git
-for file in "$SCRIPT_DIR/git"/*; do
+for file in "$SCRIPT_DIR/modules/git"/*; do
     source "$file"
 done
 
