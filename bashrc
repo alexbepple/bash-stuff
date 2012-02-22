@@ -26,10 +26,6 @@ for module in "$SCRIPT_DIR/modules"/*; do
     done
 done
 
-# Change directory
-source "$SCRIPT_DIR/functions/up"
-source "$BREW/etc/autojump"
-
 export BASH_COMPLETION_DIR="$SCRIPT_DIR/bash_completion.d"
 export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
 source "$BREW/etc/bash_completion"
