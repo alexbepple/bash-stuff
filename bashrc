@@ -26,9 +26,6 @@ for module in "$SCRIPT_DIR/modules"/*; do
     done
 done
 
-# Gradle
-export GRADLE_OPTS="-Dorg.gradle.daemon=true"
-
 # Change directory
 source "$SCRIPT_DIR/functions/up"
 source "$BREW/etc/autojump"
