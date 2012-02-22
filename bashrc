@@ -7,14 +7,6 @@ HISTCONTROL=ignoredups
 
 alias grep='grep --color=auto -i'
 
-alias g='git'
-alias ga='git add'
-alias gac='git add -A && git commit -v'
-alias gc='git commit -v'
-alias gs='git status'
-alias gd='git diff'
-alias st='open -a sourcetree'
-
 alias la='ls -a'
 alias ll='ls -l'
 alias remux='ffmpeg -vcodec copy -acodec copy -i'
@@ -38,6 +30,9 @@ add_to_path "$HOME/local/bin"
 add_to_path "/usr/local/bin"
 add_to_path "/usr/local/sbin"
 readonly BREW="$(brew --prefix)"
+
+# Git
+source "$SCRIPT_DIR/git/aliases"
 
 # Python
 add_to_path "/usr/local/share/python"

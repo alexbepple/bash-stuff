@@ -1,0 +1,11 @@
+#!/bin/bash
+
+alias g='git'
+alias ga='git add'
+alias gac='git add -A && git commit -v'
+alias gc='git commit -v'
+alias gs='git status'
+alias gd='git diff'
+
+alias st='open -a sourcetree'
+
