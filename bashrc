@@ -27,9 +27,9 @@ add_to_path() {
 add_to_path "$HOME/local/bin"
 
 # Homebrew
-add_to_path "/usr/local/bin"
-add_to_path "/usr/local/sbin"
-readonly BREW="$(brew --prefix)"
+for file in "$SCRIPT_DIR/brew"/*; do
+    source "$file"
+done
 
 # Git
 for file in "$SCRIPT_DIR/git"/*; do
