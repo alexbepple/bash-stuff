@@ -26,14 +26,11 @@ function add_to_path() {
 
 add_to_path "$HOME/local/bin"
 
-# Homebrew
-for file in "$SCRIPT_DIR/modules/brew"/*; do
-    source "$file"
-done
-
-# Git
-for file in "$SCRIPT_DIR/modules/git"/*; do
-    source "$file"
+# Load modules
+for module in "$SCRIPT_DIR/modules"/*; do
+    for file in "$module"/*; do
+        source "$file"
+    done
 done
 
 # Python
