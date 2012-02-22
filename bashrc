@@ -40,11 +40,6 @@ export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 source "$SCRIPT_DIR/functions/up"
 source "$BREW/etc/autojump"
 
-# Page more conveniently and with more color
-vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
-alias less="$vim_less"
-export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
-
 export BASH_COMPLETION_DIR="$SCRIPT_DIR/bash_completion.d"
 export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
 source "$BREW/etc/bash_completion"
