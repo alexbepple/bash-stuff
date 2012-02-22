@@ -14,14 +14,3 @@ for module in "$SCRIPT_DIR/modules"/*; do
     done
 done
 
-
-add_to_path "$HOME/local/bin"
-
-alias grep='grep --color=auto -i'
-
-alias la='ls -a'
-alias ll='ls -l'
-alias remux='ffmpeg -vcodec copy -acodec copy -i'
-alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
-alias convert.new.lines.to.nul="tr '\n' '\0'"
-
