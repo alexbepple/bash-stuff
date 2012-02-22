@@ -32,8 +32,9 @@ add_to_path "/usr/local/sbin"
 readonly BREW="$(brew --prefix)"
 
 # Git
-source "$SCRIPT_DIR/git/aliases"
-source "$SCRIPT_DIR/git/git-completion"
+for file in "$SCRIPT_DIR/git"/*; do
+    source "$file"
+done
 
 # Python
 add_to_path "/usr/local/share/python"
