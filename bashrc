@@ -1,10 +1,3 @@
-TITLEBAR="\033]2;\W\007"
-START_COLOR="\[\033[0;32m\]"
-STOP_COLOR="\[\033[0m\]"
-PS1="\n${TITLEBAR}${START_COLOR}[ \w ]${STOP_COLOR}\n$ "
-export CLICOLOR=1
-HISTCONTROL=ignoredups
-
 alias grep='grep --color=auto -i'
 
 alias la='ls -a'
