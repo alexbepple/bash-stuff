@@ -33,9 +33,6 @@ for module in "$SCRIPT_DIR/modules"/*; do
     done
 done
 
-# Ruby
-add_to_path "$HOME/.gem/ruby/1.8/bin"
-
 # Gradle
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 
