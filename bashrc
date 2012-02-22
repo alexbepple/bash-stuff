@@ -28,6 +28,8 @@ function script_dir() {
 }
 readonly SCRIPT_DIR="$(script_dir)"
 
+readonly BREW="$(brew --prefix)"
+
 add_to_path() {
     export PATH=$1:$PATH    
 }
@@ -57,7 +59,7 @@ export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 
 # Change directory
 source "$SCRIPT_DIR/functions/up"
-source `brew --prefix`/etc/autojump
+source "$BREW/etc/autojump"
 
 # Page more conveniently and with more color
 vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
@@ -66,4 +68,4 @@ export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
 
 export BASH_COMPLETION_DIR="$SCRIPT_DIR/bash_completion.d"
 export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
-source $(brew --prefix)/etc/bash_completion
+source "$BREW/etc/bash_completion"
