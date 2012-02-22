@@ -26,6 +26,7 @@ function script_dir() {
     while [ -h "$script_path" ] ; do script_path="$(readlink "$script_path")"; done
     echo "$(cd -P "$(dirname "$script_path")" && pwd)"
 }
+readonly SCRIPT_DIR="$(script_dir)"
 
 add_to_path() {
     export PATH=$1:$PATH    
@@ -55,7 +56,7 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 
 # Change directory
-source "$(script_dir)/functions/up"
+source "$SCRIPT_DIR/functions/up"
 source `brew --prefix`/etc/autojump
 
 # Page more conveniently and with more color
@@ -63,6 +64,6 @@ vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias less="$vim_less"
 export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
 
-export BASH_COMPLETION_DIR="$(script_dir)/bash_completion.d"
+export BASH_COMPLETION_DIR="$SCRIPT_DIR/bash_completion.d"
 export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
 source $(brew --prefix)/etc/bash_completion
