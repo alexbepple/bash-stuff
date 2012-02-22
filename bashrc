@@ -10,7 +10,9 @@ readonly SCRIPT_DIR="$(script_dir)"
 # Load modules
 for module in "$SCRIPT_DIR/modules"/*; do
     for file in "$module"/*; do
-        source "$file"
+        if [ -x $file ]; then
+            source "$file"
+        fi
     done
 done
 
