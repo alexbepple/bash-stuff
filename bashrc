@@ -63,6 +63,6 @@ vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias less="$vim_less"
 export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
 
-export BASH_COMPLETION_DIR="$HOME/local/bash_completion.d"
+export BASH_COMPLETION_DIR="$(script_dir)/bash_completion.d"
 export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
 source $(brew --prefix)/etc/bash_completion
