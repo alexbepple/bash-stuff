@@ -1,10 +1,4 @@
-alias grep='grep --color=auto -i'
-
-alias la='ls -a'
-alias ll='ls -l'
-alias remux='ffmpeg -vcodec copy -acodec copy -i'
-alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
-alias convert.new.lines.to.nul="tr '\n' '\0'"
+#!/bin/bash
 
 function script_dir() {
     local script_path=${BASH_SOURCE[0]}
@@ -13,16 +7,21 @@ function script_dir() {
 }
 readonly SCRIPT_DIR="$(script_dir)"
 
-function add_to_path() {
-    export PATH=$1:$PATH    
-}
-
-add_to_path "$HOME/local/bin"
-
 # Load modules
 for module in "$SCRIPT_DIR/modules"/*; do
     for file in "$module"/*; do
         source "$file"
     done
 done
+
+
+add_to_path "$HOME/local/bin"
+
+alias grep='grep --color=auto -i'
+
+alias la='ls -a'
+alias ll='ls -l'
+alias remux='ffmpeg -vcodec copy -acodec copy -i'
+alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
+alias convert.new.lines.to.nul="tr '\n' '\0'"
 
