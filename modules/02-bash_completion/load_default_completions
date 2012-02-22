@@ -1,0 +1,6 @@
+#!/bin/bash
+
+function add_default_completion() {
+    local stem="$1"
+    source "$BREW/etc/bash_completion.d"/*"$stem"*
+}
