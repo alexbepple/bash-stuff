@@ -33,10 +33,6 @@ for module in "$SCRIPT_DIR/modules"/*; do
     done
 done
 
-# Python
-add_to_path "/usr/local/share/python"
-export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
-
 # Ruby
 add_to_path "$HOME/.gem/ruby/1.8/bin"
 
