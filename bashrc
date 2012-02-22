@@ -33,6 +33,7 @@ readonly BREW="$(brew --prefix)"
 
 # Git
 source "$SCRIPT_DIR/git/aliases"
+source "$SCRIPT_DIR/git/git-completion"
 
 # Python
 add_to_path "/usr/local/share/python"
