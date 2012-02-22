@@ -56,14 +56,15 @@ alias continuously.run.jasmine.specs="watchr $HOME/local/bin/jasmine-node.watchr
 # Gradle
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 
-# Changing directory
+# Change directory
 source "$(script_dir)/functions/up"
 source `brew --prefix`/etc/autojump
-
 
 # Page more conveniently and with more color
 vim_less="vim -u /usr/share/vim/vim73/macros/less.vim"
 alias less="$vim_less"
 export MANPAGER="col -b | $vim_less -c 'set ft=man nomod nolist' -"
 
-source "$HOME/.bash_completion"
+export BASH_COMPLETION_DIR="$HOME/local/bash_completion.d"
+export BASH_COMPLETION_COMPAT_DIR="$BASH_COMPLETION_DIR"
+source $(brew --prefix)/etc/bash_completion
