@@ -22,13 +22,11 @@ alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 
 alias convert.new.lines.to.nul="tr '\n' '\0'"
 
 function script_dir() {
-    script_path=${BASH_SOURCE[0]}
+    local script_path=${BASH_SOURCE[0]}
     while [ -h "$script_path" ] ; do script_path="$(readlink "$script_path")"; done
     echo "$(cd -P "$(dirname "$script_path")" && pwd)"
 }
 readonly SCRIPT_DIR="$(script_dir)"
-
-readonly BREW="$(brew --prefix)"
 
 add_to_path() {
     export PATH=$1:$PATH    
@@ -39,6 +37,7 @@ add_to_path "$HOME/local/bin"
 # Homebrew
 add_to_path "/usr/local/bin"
 add_to_path "/usr/local/sbin"
+readonly BREW="$(brew --prefix)"
 
 # Python
 add_to_path "/usr/local/share/python"
