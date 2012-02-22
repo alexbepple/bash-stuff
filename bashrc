@@ -21,8 +21,6 @@ alias remux='ffmpeg -vcodec copy -acodec copy -i'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
 alias convert.new.lines.to.nul="tr '\n' '\0'"
 
-alias locate.updatedb='sudo /usr/libexec/locate.updatedb'
-
 function script_dir() {
     script_path=${BASH_SOURCE[0]}
     while [ -h "$script_path" ] ; do script_path="$(readlink "$script_path")"; done
