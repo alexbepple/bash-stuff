@@ -10,3 +10,5 @@ alias remux='ffmpeg -vcodec copy -acodec copy -i'
 alias unset.executable.bit.for.regular.files='find . -type f -print0 | xargs -0 chmod -x'
 alias convert.new.lines.to.nul="tr '\n' '\0'"
 alias tree.for.exchange.dropboxes="tree -I 'Icon*' --prune --noreport -N -F"
+
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/r16
