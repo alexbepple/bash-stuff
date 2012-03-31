@@ -3,6 +3,6 @@
 eval "$(rbenv init -)"
 
 # For use with `bundler --binstubs=./bundler_stubs`
-add_to_path './bundler_stubs'
+prepend_to_path './bundler_stubs'
 
 alias be='bundle exec'
