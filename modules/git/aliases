@@ -6,6 +6,7 @@ alias gac='git add -A && git commit -v'
 alias gc='git commit -v'
 alias gs='git status'
 alias gd='git diff'
+alias gr='git reset HEAD'
 
 alias st='open -a sourcetree'
 
