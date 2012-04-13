@@ -1,3 +1,4 @@
 #!/bin/bash
 
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
+prepend_to_path "$HOME/Applications/gradle/bin"
