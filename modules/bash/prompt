@@ -1,13 +1,11 @@
 #!/bin/bash
 
 __build_prompt() {
-    PS1="\n${line1}\n${line2}"
+    PS1="${TITLEBAR}\n${line1}\n${line2}"
 }
 
 TITLEBAR="\033]2;\W\007"
-START_COLOR="\033[0;32m"
-STOP_COLOR="\033[0m"
-line1="${TITLEBAR}${START_COLOR}[ \w ]${STOP_COLOR}"
+line1="${green}[ \w ]${end_color}"
 line2="$ "
 
 __build_prompt
