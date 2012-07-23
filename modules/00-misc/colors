@@ -1,14 +1,14 @@
 #!/bin/bash
 
-  black='\033[30;m'
-    red='\033[31;m'
-  green='\033[32;m'
- yellow='\033[33;m'
-   blue='\033[34;m'
-magenta='\033[35;m'
-   cyan='\033[36;m'
-  white='\033[37;m'
+     black='\033[30;m'
+       red='\033[31;m'
+     green='\033[32;m'
+    yellow='\033[33;m'
+      blue='\033[34;m'
+   magenta='\033[35;m'
+      cyan='\033[36;m'
+     white='\033[37;m'
 
-  light_gray='\033[1;32;m'
+light_gray='\033[1;32;m'
 
-end_color="\033[0m"
+ end_color='\033[0m'
