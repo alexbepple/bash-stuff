@@ -1,0 +1,18 @@
+#!/bin/bash
+
+__build_prompt() {
+    PS1="\n${line1}\n${line2}"
+}
+
+TITLEBAR="\033]2;\W\007"
+START_COLOR="\[\033[0;32m\]"
+STOP_COLOR="\[\033[0m\]"
+line1="${TITLEBAR}${START_COLOR}[ \w ]${STOP_COLOR}"
+line2="$ "
+
+__build_prompt
+
+function append_to_prompt() {
+    line1="$line1 $1"
+    __build_prompt
+}

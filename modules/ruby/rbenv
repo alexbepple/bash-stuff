@@ -1,0 +1,9 @@
+#!/bin/bash
+
+eval "$(rbenv init -)"
+
+__rbenv_ps1() {
+    echo $(rbenv version | sed -e 's/ .*//')
+}
+append_to_prompt '$(__rbenv_ps1)'
+

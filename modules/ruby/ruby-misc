@@ -1,7 +1,5 @@
 #!/bin/bash
 
-eval "$(rbenv init -)"
-
 # For use with `bundler --binstubs=./bundler_stubs`
 prepend_to_path './bundler_stubs'
 
