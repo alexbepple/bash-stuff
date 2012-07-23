@@ -5,8 +5,8 @@ __build_prompt() {
 }
 
 TITLEBAR="\033]2;\W\007"
-START_COLOR="\[\033[0;32m\]"
-STOP_COLOR="\[\033[0m\]"
+START_COLOR="\033[0;32m"
+STOP_COLOR="\033[0m"
 line1="${TITLEBAR}${START_COLOR}[ \w ]${STOP_COLOR}"
 line2="$ "
 
