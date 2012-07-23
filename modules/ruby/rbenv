@@ -2,8 +2,12 @@
 
 eval "$(rbenv init -)"
 
+__rbenv_global_version=$(rbenv global | sed -e 's/ .*//')
 __rbenv_ps1() {
-    echo $(rbenv version | sed -e 's/ .*//')
+    local current_version=$(rbenv version | sed -e 's/ .*//')
+    if [ $__rbenv_global_version != $current_version ]; then
+        echo $current_version
+    fi
 }
 append_to_prompt '$(__rbenv_ps1)'
 
