@@ -2,9 +2,13 @@
 
 eval "$(rbenv init -)"
 
-__rbenv_global_version=$(rbenv global | sed -e 's/ .*//')
+__rbenv_version_no() {
+    echo $1 | sed -e 's/ .*//'
+}
+
+__rbenv_global_version=$(__rbenv_version_no `rbenv global`)
 __rbenv_ps1() {
-    local current_version=$(rbenv version | sed -e 's/ .*//')
+    local current_version=$(__rbenv_version_no `rbenv version`)
     if [ $__rbenv_global_version != $current_version ]; then
         echo $current_version
     fi
