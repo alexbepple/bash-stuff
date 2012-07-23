@@ -13,5 +13,5 @@ __rbenv_ps1() {
         echo $current_version
     fi
 }
-append_to_prompt '$(__rbenv_ps1)'
+append_to_prompt $red '$(__rbenv_ps1)' $end_color
 

@@ -11,6 +11,9 @@ line2="$ "
 __build_prompt
 
 function append_to_prompt() {
-    line1="$line1 $1"
+    while (( "$#" )); do
+        line1="$line1 $1"
+        shift
+    done
     __build_prompt
 }
