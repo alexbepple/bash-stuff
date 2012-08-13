@@ -9,9 +9,8 @@ __rbenv_version_no() {
 __rbenv_global_version=$(__rbenv_version_no `rbenv global`)
 __rbenv_ps1() {
     local current_version=$(__rbenv_version_no `rbenv version`)
-    if [ $__rbenv_global_version != $current_version ]; then
-        echo $current_version
-    fi
+    echo $current_version
 }
-append_to_prompt $red '$(__rbenv_ps1)' $end_color
-
+__rbenv_append_version_to_prompt() {
+    append_to_prompt $red '$(__rbenv_ps1)' $end_color
+}
