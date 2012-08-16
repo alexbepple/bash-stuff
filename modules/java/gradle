@@ -2,3 +2,11 @@
 
 export GRADLE_OPTS="-Dorg.gradle.daemon=true"
 prepend_to_path "$HOME/Applications/gradle/bin"
+
+
+__gradle_version() {
+    gradle --version | grep -e 'Gradle \d.*'
+}
+__gradle_append_version_to_prompt() {
+    append_to_prompt $red "$(__gradle_version)" $end_color
+}
