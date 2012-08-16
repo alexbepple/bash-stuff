@@ -2,15 +2,10 @@
 
 eval "$(rbenv init -)"
 
-__rbenv_version_no() {
-    echo $1 | sed -e 's/ .*//'
+__rbenv_version() {
+    rbenv version | sed 's/ .*//'
 }
 
-__rbenv_global_version=$(__rbenv_version_no `rbenv global`)
-__rbenv_ps1() {
-    local current_version=$(__rbenv_version_no `rbenv version`)
-    echo $current_version
-}
 __rbenv_append_version_to_prompt() {
-    append_to_prompt $red '$(__rbenv_ps1)' $end_color
+    append_to_prompt $red '$(__rbenv_version)' $end_color
 }
