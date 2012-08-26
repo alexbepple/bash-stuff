@@ -1,3 +1,0 @@
-#!/bin/bash
-
-add_default_completion "brew"
