@@ -12,3 +12,5 @@ alias convert.new.lines.to.nul="tr '\n' '\0'"
 alias tree.for.exchange.dropboxes="tree -I 'Icon*' --prune --noreport -N -F"
 
 alias serve.this='mongoose -x ".DS_Store"'
+
+export EDITOR=mvim
