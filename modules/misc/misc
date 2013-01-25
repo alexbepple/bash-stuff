@@ -16,3 +16,5 @@ alias serve.this='mongoose -x ".DS_Store"'
 export EDITOR=mvim
 
 alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
+
+alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
