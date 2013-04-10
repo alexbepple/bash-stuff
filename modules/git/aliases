@@ -8,6 +8,7 @@ alias gco='git checkout --'
 alias gs='git status'
 alias gd='git diff'
 alias gr='git reset HEAD'
+alias gl='git log --oneline'
 
 alias st='open -a sourcetree'
 
