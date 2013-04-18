@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function deref_link() {
+    link="$1"
+    while [ -h "$link" ]; do
+        link=`readlink "$link"`
+    done
+    echo "$link"
+}
+
+function follow_link() {
+    target=$(deref_link "$1")
+    container=$(dirname "$target")
+    cd "$container"
+}
+
