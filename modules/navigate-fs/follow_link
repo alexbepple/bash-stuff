@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function deref_link() {
+function __deref() {
     link="$1"
     while [ -h "$link" ]; do
         link=`readlink "$link"`
@@ -8,9 +8,13 @@ function deref_link() {
     echo "$link"
 }
 
-function follow_link() {
-    target=$(deref_link "$1")
+function follow() {
+    target=$(__deref "$1")
     container=$(dirname "$target")
     cd "$container"
 }
 
+function follow_executable() {
+    target=$(which "$1")
+    follow "$target"
+}
