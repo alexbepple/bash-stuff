@@ -1,0 +1,7 @@
+
+set completion-ignore-case on
+
+"\es": backward-kill-word
+"\eS": backward-kill-line
+"\ea": beginning-of-line
+"\eA": end-of-line
