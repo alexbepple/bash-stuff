@@ -5,3 +5,7 @@ set completion-ignore-case on
 "\eS": backward-kill-line
 "\ea": beginning-of-line
 "\eA": end-of-line
+
+set show-all-if-ambiguous on
+TAB: menu-complete
+
