@@ -1,0 +1,4 @@
+#!/bin/bash
+
+prepend_to_path "$HOME/.phpenv/bin"
+eval "$(phpenv init -)"
