@@ -7,5 +7,4 @@ set completion-ignore-case on
 "\eA": end-of-line
 
 set show-all-if-ambiguous on
-TAB: menu-complete
 
