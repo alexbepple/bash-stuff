@@ -19,5 +19,13 @@ function follow_executable() {
     follow "$target"
 }
 
-complete -c follow_executable
+function less_executable() {
+    target=$(which "$1")
+    less "$target"
+}
 
+alias fe=follow_executable
+complete -c fe
+
+alias le=less_executable
+complete -c le
