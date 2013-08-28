@@ -6,3 +6,5 @@ function java_use() {
     export JAVA_HOME=$(/usr/libexec/java_home -v $1)
     java -version
 }
+
+prepend_to_path "$HOME/Applications/nexus/bin"
