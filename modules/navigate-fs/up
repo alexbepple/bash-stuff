@@ -12,4 +12,4 @@ function up() {
 }
 
 
-alias bd=". bd -s"
+alias bd=". bd -si"
