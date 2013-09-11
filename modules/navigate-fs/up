@@ -10,3 +10,6 @@ function up() {
     done
     cd $target
 }
+
+
+alias bd=". bd -s"
