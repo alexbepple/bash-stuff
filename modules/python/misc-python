@@ -1,4 +1,3 @@
 #!/bin/bash
 
-add_to_path "/usr/local/share/python"
 export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
