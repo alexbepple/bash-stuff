@@ -22,3 +22,9 @@ alias fix.open.with='/System/Library/Frameworks/CoreServices.framework/Versions/
 launchctl setenv PATH "/Users/ab/.rbenv/shims:/usr/bin:/bin:/usr/sbin:/sbin"
 
 prepend_to_path "$(brew --prefix ccache)/libexec"
+
+
+__svn_clean() {
+    svn st | grep '^?' | awk '{print $2}' | xargs rm
+}
+alias svn.clean='__svn_clean'
