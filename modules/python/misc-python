@@ -1,3 +1,5 @@
 #!/bin/bash
 
 export PYTHONPATH="$HOME/local/pythonpath:$PYTHONPATH"
+
+source /usr/local/bin/virtualenvwrapper.sh
